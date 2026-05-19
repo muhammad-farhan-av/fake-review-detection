@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Review Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Fake Product Review Detection</h1>
+
+    <form action="/predict" method="post">
+
+        <textarea name="review" placeholder="Enter product review here"></textarea>
+
+        <br>
+
+        <button type="submit">Check Review</button>
+
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+
+</div>
+
+</body>
+</html>
